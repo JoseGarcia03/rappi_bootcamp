@@ -1,0 +1,197 @@
+:root {
+    font-size: 16px;
+    --primary-color: #FD778D;
+    --border-color: #642746;
+    --active-color: #FD5470;
+    --background-color: #FBD9DE;
+    --color-white: #FFFFFF;
+    --color-thank: #EB63CB;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+/* General */
+
+.active {
+    padding: .25rem;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    background-color: var(--active-color);
+    transition: transform;
+    transition-duration: 200ms;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+.header {
+    background-color: var(--primary-color);
+    display: block;
+    padding: 0 50px;
+    overflow: hidden;
+    color: var(--color-white);
+
+    .nav {
+        float: left;
+        transform: translateY(40%);
+
+        & ul {
+            padding: 0;
+
+            & li {
+                cursor: pointer;
+                transition: transform;
+                transition-duration: 200ms;
+                display: inline-block;
+                margin-right: 15px;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .logo {
+        width: 100px;
+        float: right;
+    }
+}
+
+.footer {
+    display: block;
+    padding: 50px;
+    background-color: var(--primary-color);
+    text-align: center;
+    color: var(--color-white);
+}
+
+/* Index */
+
+.main_index {
+    padding: 0 50px;
+
+    .first_section_index {
+        text-align: center;
+        color: var(--primary-color);
+    }
+
+    .banner {
+        width: 80vw;
+        height: 60vh;
+        object-fit: cover;
+        border: 5px solid var(--color-white)
+    }
+
+    .second_section_index {
+        display: block;
+        margin-bottom: 20px;
+
+        .thank_message {
+            margin: 0;
+            display: inline;
+            color: var(--color-thank);
+        }
+
+        .redcream_index {
+            display: inline-block;
+            width: 250px;
+            margin-left: calc(100% - 300px);
+            border: 5px solid var(--color-white)
+        }
+    }
+}
+
+/* About */
+
+.main_about {
+    padding: 0 50px;
+
+    .title_section {
+        color: var(--primary-color);
+        text-align: center;
+    }
+
+    .images_section {
+
+        .figure {
+            display: block;
+            position: relative;
+            margin: 50px 0;
+
+            img {
+                width: 300px;
+                display: inline-block;
+                border: 5px solid var(--color-white)
+            }
+
+            figcaption {
+                display: inline-block;
+                color: var(--color-thank);
+                margin: 0;
+                text-align: center;
+                width: calc(100% - 310px);
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
+
+/* Contact */
+
+.main_contact {
+    padding: 0 50px;
+    margin: 50px auto;
+
+    .title_section {
+        color: var(--primary-color);
+        text-align: center;
+
+        img {
+            width: 80vw;
+            height: 60vh;
+            object-fit: cover;
+            object-position: bottom;
+            border: 5px solid var(--color-white)
+        }
+    }
+
+    .info_section {
+        color: var(--color-thank);
+
+        .details {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .email {
+            display: inline-block;
+            width: 50%;
+            font-size: 22px;
+            color: var(--color-thank);
+            text-decoration: underline;
+        }
+        
+        .phone {
+            display: inline-block;
+            width: 49%;
+            text-align: end;
+            font-size: 22px;
+            color: var(--color-thank);
+            text-decoration: underline;
+        }
+    }
+}
